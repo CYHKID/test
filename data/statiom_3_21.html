@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>設備點檢表</title>
+</head>
+
+<body>
+    <div>
+        <H2 class="center">儀表產線工作站一_設備點檢</H2>
+        <form action="/" class="center">
+            <button>回首頁</button>
+        </form>
+        <div class="center">
+            <form action="/add_4_1_data" method="POST">
+                <hr>
+                <h3>電烙鐵(無鉛專用) MA-C-393</h3>
+                烙鐵溫度：<input type="number" name="brandIronTemperature0" min="390" max="410" required /> 400±10℃ <span class="ok">OK</span><br />
+                檢查者： <input type="text" name="checkUser0" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                確認者： <input type="text" name="confirmUser0" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                <br>
+                <hr>
+                <h3>靜電風扇 MA-C-259</h3>
+                運作功能：
+                <input type="radio" name="run0" checked value="OK"> OK
+                <input type="radio" name="run0" value="NO"> NO <br />
+                清潔探針：
+                <input type="radio" name="cleanProbe0" checked value="OK"> OK
+                <input type="radio" name="cleanProbe0" value="NO"> NO <br />
+                清潔葉片：
+                <input type="radio" name="cleanFlade0" checked value="OK"> OK
+                <input type="radio" name="cleanFlade0" value="NO"> NO <br />
+                檢查者： <input type="text" name="checkUser1" required placeholder="請輸入職號" /><br />
+                確認者： <input type="text" name="confirmUser1" required placeholder="請輸入職號" /><br />
+                <br>
+                <hr>
+                <h3>自動焊錫機 MA-C-250</h3>
+                LCD焊錫 溫度：<input type="number" name="lcdSolderTin0" min="355" max="375" required /> 365±10℃<br />
+                模組焊錫 溫度：<input type="number" name="moduleSolderTin0" min="390" max="410" required /> 400±10℃<br />
+                START按鍵：
+                <input type="radio" name="startButton0" checked value="OK"> OK
+                <input type="radio" name="startButton0" value="NO"> NO <br />
+                送錫器：
+                <input type="radio" name="tinwireConveyor0" checked value="OK"> OK
+                <input type="radio" name="tinwireConveyor0" value="NO"> NO <br />
+                外觀清潔：
+                <input type="radio" name="cleanBody0" checked value="OK"> OK
+                <input type="radio" name="cleanBody0" value="NO"> NO <br />
+                檢查者： <input type="text" name="checkUser2" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                確認者： <input type="text" name="confirmUser2" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                <br>
+                <hr>
+                <h3>抽風機 MA-C-254</h3>
+                燈無閃爍(橘燈：
+                <input type="radio" name="PRElight0" checked value="OK"> OK
+                <input type="radio" name="PRElight0" value="NO"> NO <br />
+                外觀清潔：
+                <input type="radio" name="cleanBody1" checked value="OK"> OK
+                <input type="radio" name="cleanBody1" value="NO"> NO <br />
+                更換濾棉/濾芯：
+                <input type="radio" name="changeFilter0" checked value="OK"> OK
+                <input type="radio" name="changeFilter0" value="NO"> NO <br />
+                檢查者： <input type="text" name="checkUser3" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                確認者： <input type="text" name="confirmUser3" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                <br>
+                <hr>
+                <h3>抽風機 MA-C-255</h3>
+                燈無閃爍(橘燈：
+                <input type="radio" name="PRElight1" checked value="OK"> OK
+                <input type="radio" name="PRElight1" value="NO"> NO <br />
+                外觀清潔：
+                <input type="radio" name="cleanBody2" checked value="OK"> OK
+                <input type="radio" name="cleanBody2" value="NO"> NO <br />
+                更換濾棉/濾芯：
+                <input type="radio" name="changeFilter1" checked value="OK"> OK
+                <input type="radio" name="changeFilter1" value="NO"> NO <br />
+                檢查者： <input type="text" name="checkUser4" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                確認者： <input type="text" name="confirmUser4" required pattern="[0-9]{5}" placeholder="請輸入職號" /><br />
+                <br>
+                <hr>
+                <br>
+                <button class="center">送出資料</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
